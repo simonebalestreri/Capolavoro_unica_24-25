@@ -1,0 +1,209 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\clacoupe.jpg",
+      "PackagePath": "staticwebassets\\assets\\clacoupe.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\clasb.jpg",
+      "PackagePath": "staticwebassets\\assets\\clasb.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classe_a.jpg",
+      "PackagePath": "staticwebassets\\assets\\classe_a.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classe_c_berlina.jpg",
+      "PackagePath": "staticwebassets\\assets\\classe_c_berlina.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classe_e_berlina.jpg",
+      "PackagePath": "staticwebassets\\assets\\classe_e_berlina.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classe_s_berlina.jpg",
+      "PackagePath": "staticwebassets\\assets\\classe_s_berlina.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classe_s_passolungo.jpg",
+      "PackagePath": "staticwebassets\\assets\\classe_s_passolungo.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classeb.jpg",
+      "PackagePath": "staticwebassets\\assets\\classeb.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classecsw.jpg",
+      "PackagePath": "staticwebassets\\assets\\classecsw.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classeeat.jpg",
+      "PackagePath": "staticwebassets\\assets\\classeeat.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classeesw.jpg",
+      "PackagePath": "staticwebassets\\assets\\classeesw.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classeg.jpg",
+      "PackagePath": "staticwebassets\\assets\\classeg.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classet.jpg",
+      "PackagePath": "staticwebassets\\assets\\classet.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\classev.jpg",
+      "PackagePath": "staticwebassets\\assets\\classev.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\clecabrio.jpg",
+      "PackagePath": "staticwebassets\\assets\\clecabrio.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\clecoupe.jpg",
+      "PackagePath": "staticwebassets\\assets\\clecoupe.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqa.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqa.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqb.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqb.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqe-berlina.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqe-berlina.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqesuv.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqesuv.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqs.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqs.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqs_berlina.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqs_berlina.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqssuv.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqssuv.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqt.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqt.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\eqv.jpg",
+      "PackagePath": "staticwebassets\\assets\\eqv.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\gla.jpg",
+      "PackagePath": "staticwebassets\\assets\\gla.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\glb.jpg",
+      "PackagePath": "staticwebassets\\assets\\glb.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\glc.jpg",
+      "PackagePath": "staticwebassets\\assets\\glc.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\glccoupe.jpg",
+      "PackagePath": "staticwebassets\\assets\\glccoupe.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\gle.jpg",
+      "PackagePath": "staticwebassets\\assets\\gle.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\glecoupe.jpg",
+      "PackagePath": "staticwebassets\\assets\\glecoupe.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\gls.jpg",
+      "PackagePath": "staticwebassets\\assets\\gls.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\hero1.mp4",
+      "PackagePath": "staticwebassets\\assets\\hero1.mp4"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\assets\\logo5.jpg",
+      "PackagePath": "staticwebassets\\assets\\logo5.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\contatti.html",
+      "PackagePath": "staticwebassets\\components\\contatti.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\footer.html",
+      "PackagePath": "staticwebassets\\components\\footer.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\header.html",
+      "PackagePath": "staticwebassets\\components\\header.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\login.html",
+      "PackagePath": "staticwebassets\\components\\login.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\modelli.html",
+      "PackagePath": "staticwebassets\\components\\modelli.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\components\\register.html",
+      "PackagePath": "staticwebassets\\components\\register.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\css\\stilemacchine.css",
+      "PackagePath": "staticwebassets\\css\\stilemacchine.css"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\js\\script1.js",
+      "PackagePath": "staticwebassets\\js\\script1.js"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\js\\template-loader.js",
+      "PackagePath": "staticwebassets\\js\\template-loader.js"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\pages\\index.html",
+      "PackagePath": "staticwebassets\\pages\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.WebApplication1.props",
+      "PackagePath": "build\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication1.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.WebApplication1.props",
+      "PackagePath": "buildTransitive\\WebApplication1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

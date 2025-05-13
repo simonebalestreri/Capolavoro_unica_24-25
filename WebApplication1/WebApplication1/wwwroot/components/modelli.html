@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelli Mercedes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-right: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 10px;
+    }
+    .sidebar label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .filter-option input {
+      margin-right: 10px;
+    }
+
+    .models {
+      flex-grow: 1;
+      padding: 0 20px;
+    }
+
+    .model-category {
+      margin-bottom: 50px;
+    }
+
+    .model-category h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    .model-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .model-card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .model-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .model-card:hover .hover-details {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hover-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(50, 50, 50, 0.9));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.3s ease;
+      transform: translateY(20px);
+      padding: 20px;
+    }
+
+    .hover-details h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .hover-details p {
+      margin: 5px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #0056b3, #003a80);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Modelli Mercedes</h1>
+    <p>Scopri i nostri brand e modelli: trova l'auto dei tuoi sogni</p>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Carrozzeria</h3>
+      <label><input type="radio" name="filter" onclick="scrollToSection('berline')"> Berline</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('suv')"> SUV & Fuoristrada</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('station-wagon')"> Station Wagon</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('compatte')"> Compatte</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('coupe')"> Coupé</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('cabrio')"> Cabrio / Roadster</label>
+      <label><input type="radio" name="filter" onclick="scrollToSection('monovolume')"> Monovolume</label>
+        </div>
+
+        <div class="models">
+      <div class="model-category" id="berline">
+        <h2>Berline</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/eqe-berlina.jpg') center/cover no-repeat;">
+        <h3>EQE Berlina</h3>
+        <div class="hover-details">
+          <h3>EQE Berlina</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2140551')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/eqs_berlina.jpg') center/cover no-repeat;">
+        <h3>EQS Berlina</h3>
+        <div class="hover-details">
+          <h3>EQS Berlina</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2230691')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classe_c_berlina.jpg') center/cover no-repeat;">
+        <h3>Classe C Berlina</h3>
+        <div class="hover-details">
+          <h3>Classe C Berlina</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2062031')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classe_e_berlina.jpg') center/cover no-repeat;">
+        <h3>Classe E Berlina</h3>
+        <div class="hover-details">
+          <h3>Classe E Berlina</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2142501')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classe_s_berlina.jpg') center/cover no-repeat;">
+        <h3>Classe S Berlina</h3>
+        <div class="hover-details">
+          <h3>Classe S Berlina</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2231211')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classe_s_passolungo.jpg') center/cover no-repeat;">
+        <h3>Classe S Passo Lungo</h3>
+        <div class="hover-details">
+          <h3>Classe S Passo Lungo</h3>
+          <a href="#" class="btn" onclick="fetchModelData('2231611')">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-category" id="suv">
+        <h2>SUV & Fuoristrada</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/eqa.jpg') center/cover no-repeat;">
+        <h3>EQA</h3>
+        <div class="hover-details">
+          <h3>EQA</h3>
+          <p>Prezzo da 56.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/eqb.jpg') center/cover no-repeat;">
+        <h3>EQB</h3>
+        <div class="hover-details">
+          <h3>EQB</h3>
+          <p>Prezzo da 58.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/eqesuv.jpg') center/cover no-repeat;">
+        <h3>EQE SUV</h3>
+        <div class="hover-details">
+          <h3>EQE SUV</h3>
+          <p>Prezzo da 91.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/eqssuv.jpg') center/cover no-repeat;">
+        <h3>EQS SUV</h3>
+        <div class="hover-details">
+          <h3>EQS SUV</h3>
+          <p>Prezzo da 135.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classeg.jpg') center/cover no-repeat;">
+        <h3>Classe G</h3>
+        <div class="hover-details">
+          <h3>Classe G</h3>
+          <p>Prezzo da 169.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/gla.jpg') center/cover no-repeat;">
+        <h3>GLA</h3>
+        <div class="hover-details">
+          <h3>GLA</h3>
+          <p>Prezzo da 42.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/glb.jpg') center/cover no-repeat;">
+        <h3>GLB</h3>
+        <div class="hover-details">
+          <h3>GLB</h3>
+          <p>Prezzo da 44.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/glc.jpg') center/cover no-repeat;">
+            <h3>GLC</h3>
+            <div class="hover-details">
+              <h3>GLC</h3>
+              <p>Prezzo da 62.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/glccoupe.jpg') center/cover no-repeat;">
+            <h3>GLC Coupé</h3>
+            <div class="hover-details">
+              <h3>GLC Coupé</h3>
+              <p>Prezzo da 68.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/gle.jpg') center/cover no-repeat;">
+            <h3>GLE</h3>
+            <div class="hover-details">
+              <h3>GLE</h3>
+              <p>Prezzo da 84.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/glecoupe.jpg') center/cover no-repeat;">
+            <h3>GLE Coupé</h3>
+            <div class="hover-details">
+              <h3>GLE Coupé</h3>
+              <p>Prezzo da 100.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/gls.jpg') center/cover no-repeat;">
+            <h3>GLS</h3>
+            <div class="hover-details">
+              <h3>GLS</h3>
+              <p>Prezzo da 118.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+      </div>
+    </div>
+      <div class="model-category", id="station-wagon">
+        <h2>Station Wagon</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/clasb.jpg') center/cover no-repeat;">
+            <h3>Classe C 300</h3>
+            <div class="hover-details">
+              <h3>GLS</h3>
+              <a href="#" class="btn" onclick="fetchModelData('2060461')">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+
+          <div class="model-card" style="background: url('../assets/classecsw.jpg') center/cover no-repeat;">
+            <h3>Classe C Station Wagon</h3>
+            <div class="hover-details">
+              <h3>Classe C Station Wagon</h3>
+              <a href="#" class="btn" onclick="fetchModelData('2062431')">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classeesw.jpg') center/cover no-repeat;">
+            <h3>Mercedes-AMG E 53 Hybrid</h3>
+            <div class="hover-details">
+              <h3>Classe E Station Wagon</h3>
+              <a href="#" class="btn" onclick="fetchModelData('2142631')">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          <div class="model-card" style="background: url('../assets/classeeat.jpg') center/cover no-repeat;">
+            <h3>Classe E All-Terrain</h3>
+            <div class="hover-details">
+              <h3>Classe E All-Terrain</h3>
+              <a href="#" class="btn" onclick="fetchModelData('2142331')">Vedi dettagli tecnici</a>
+            </div>
+          </div>
+          
+      </div>
+
+      <div class="model-category", id="compatte">
+        <h2>Compatte</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/classe_a.jpg') center/cover no-repeat;"> 
+            <h3>Classe A</h3>
+            <div class="hover-details">
+              <h3>Classe A</h3>
+              <a href="#" class="btn" onclick="fetchModelData('1770101')">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+          <div class="model-card" style="background: url('../assets/classeb.jpg') center/cover no-repeat;">
+            <h3>AMG A45S</h3>
+            <div class="hover-details">
+              <h3>AMG A 45 S</h3>
+              <a href="#" class="btn" onclick="fetchModelData('1770541')">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="model-category", id="coupe">
+        <h2>Coupé</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/clacoupe.jpg') center/cover no-repeat;">
+            <h3>CLA Coupé</h3>
+            <div class="hover-details">
+              <h3>CLA Coupé</h3>
+              <a href="#" class="btn" onclick="fetchModelData('1771471')">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+          <div class="model-card" style="background: url('../assets/clecoupe.jpg') center/cover no-repeat;">
+            <h3>CLE Coupé</h3>
+            <div class="hover-details">
+              <h3>CLE Coupé</h3>
+              <a href="#" class="btn" onclick="fetchModelData('2142231')">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="model-category", id="cabrio">
+        <h2>Cabrio / Roadster</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/clecabrio.jpg') center/cover no-repeat;">
+            <h3>CLE Cabrio</h3>
+            <div class="hover-details">
+              <h3>CLE Cabrio</h3>
+              <p>Prezzo da 68.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+          </div>
+      </div>
+    <div>
+
+      <div class="model-category", id="monovolume">
+        <h2>Monovolume</h2>
+        <div class="model-list">
+          <div class="model-card" style="background: url('../assets/eqt.jpg') center/cover no-repeat;">
+            <h3>EQT</h3>
+            <div class="hover-details">
+              <h3>EQT</h3>
+              <p>Prezzo da 52.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+          <div class="model-card" style="background: url('../assets/eqv.jpg') center/cover no-repeat;">
+            <h3>EQV</h3>
+            <div class="hover-details">
+              <h3>EQV</h3>
+              <p>Prezzo da 94.000,00 €</p>
+              <a href="#" class="btn">Vedi dettagli tecnici</a>
+            </div>
+        </div>
+        <div class="model-card" style="background: url('../assets/classet.jpg') center/cover no-repeat;">
+          <h3>Classe T</h3>
+          <div class="hover-details">
+            <h3>Classe T</h3>
+            <p>Prezzo da 32.000,00 €</p>
+            <a href="#" class="btn">Vedi dettagli tecnici</a>
+          </div>
+      </div>
+      <div class="model-card" style="background: url('../assets/classev.jpg') center/cover no-repeat;">
+        <h3>Classe V</h3>
+        <div class="hover-details">
+          <h3>Classe V</h3>
+          <p>Prezzo da 63.000,00 €</p>
+          <a href="#" class="btn">Vedi dettagli tecnici</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+  <script>
+      // Carica il footer da footer.html
+      fetch("../components/footer.html")
+          .then(response => response.text())
+          .then(data => {
+              const footer = document.createElement('footer');
+              footer.innerHTML = data;
+              document.body.appendChild(footer);
+          });
+  </script>
+
+   <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+
+
+<!-- Popup -->
+<div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
+<div id="popup" class="popup">
+  <span class="close-btn" onclick="closePopup()">×</span>
+  <h2>Dettagli Tecnici</h2>
+  <div id="popupContent">
+    <p>Caricamento...</p>
+  </div>
+</div>
+
+
+<script>
+  async function fetchModelData(vehicleId) {
+      const url = `https://api.mercedes-benz.com/configurator/v2/markets/de_DE/models/${vehicleId}?zipCode=2000`;
+      const apiKey = "0f0c20a4-9d57-4fa1-8602-1b0799504475"; 
+  
+      // Mostra il popup con "Caricamento..."
+      document.getElementById('popupOverlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('popupContent').innerHTML = "<p>Caricamento...</p>";
+  
+      try {
+          const response = await fetch(url, {
+              method: "GET",
+              headers: {
+                  "Accept": "application/json",
+                  "x-api-key": apiKey
+              }
+          });
+  
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+  
+          const data = await response.json();
+          
+          // Estraggo solo le informazioni essenziali
+          const modelName = data.name || "N/A";
+          const price = data.priceInformation?.price ? data.priceInformation.price.toFixed(2) + " €" : "Non disponibile";
+          const vehicleType = data.vehicleBody?.bodyName || "N/A";
+          const vehicleClass = data.vehicleClass?.className || "N/A";
+          const steeringPosition = data.steeringPosition === "LEFT" ? "Sinistra" : "Destra";
+  
+          // Mostra i dati nel popup
+          document.getElementById('popupContent').innerHTML = `
+            <p><strong>Modello:</strong> ${modelName}</p>
+            <p><strong>Prezzo:</strong> ${price}</p>
+            <p><strong>Tipo di veicolo:</strong> ${vehicleType}</p>
+            <p><strong>Classe:</strong> ${vehicleClass}</p>
+            <p><strong>Posizione del volante:</strong> ${steeringPosition}</p>
+          `;
+      } catch (error) {
+          document.getElementById('popupContent').innerHTML = "<p>Errore nel caricamento dei dati.</p>";
+          console.error("Error fetching data:", error);
+      }
+  }
+  
+  function closePopup() {
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+
+  </div>
+</body>
+</html>

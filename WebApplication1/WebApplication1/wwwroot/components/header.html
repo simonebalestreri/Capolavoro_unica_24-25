@@ -1,0 +1,75 @@
+<header>
+    <div class="header-container">
+        <!-- Scritta Mercedes a sinistra -->
+        <div class="brand-name">
+            <span>Mercedes-Benz</span>
+        </div>
+
+        <!-- Logo al centro -->
+        <div class="logo">
+            <a href="#">
+                <img src="../assets/logo5.jpg" alt="Mercedes-Benz Logo">
+            </a>
+        </div>
+
+        <!-- Pulsante di login a destra -->
+        <div class="header-actions">
+            <a href="#login" class="login-btn">Login</a>
+        </div>
+    </div>
+</header>
+
+<style>
+header {
+    width: 100%;
+    background-color: #000; /* Cambia il colore di sfondo a nero */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spazia gli elementi correttamente */
+    width: 100%;
+}
+
+.brand-name {
+    flex-grow: 1; /* Occupa lo spazio disponibile a sinistra */
+    text-align: left; 
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; /* Cambia il colore del testo a bianco */
+}
+
+.logo {
+    flex-grow: 1; /* Il logo rimane centrato */
+    text-align: center; 
+}
+
+.header-actions {
+    flex-grow: 1; /* Login rimane a destra */
+    text-align: right;
+}
+
+.logo img {
+    max-width: 100px; /* Adatta la grandezza del logo */
+}
+
+/* Stili del pulsante login */
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+</style>

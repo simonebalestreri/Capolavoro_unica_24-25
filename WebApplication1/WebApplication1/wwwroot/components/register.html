@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrazione - Mercedes</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <img src="../assets/logo5.jpg" alt="Mercedes Logo" class="logo">
+      <h2>Registrazione</h2>
+    </div>
+    <div class="login-box">
+      <h3>Crea un account</h3>
+      <p>Compila i campi per registrarti</p>
+      <form action="../php/register.php" method="POST">
+        <label for="email">Indirizzo e-mail *</label>
+        <input type="email" name="email" id="email" placeholder="Inserisci la tua e-mail" required>
+
+        <label for="password">Password *</label>
+        <input type="password" name="password" id="password" placeholder="Crea una password" required>
+
+        <button type="submit" class="btn-primary">Registrati</button>
+      </form>
+      <p class="register-link">Hai già un account? <a href="login.html">Accedi</a></p>
+    </div>
+  </div>
+</body>
+</html>
+ 

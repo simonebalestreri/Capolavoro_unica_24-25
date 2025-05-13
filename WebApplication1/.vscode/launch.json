@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "c:\\Users\\Administrator\\source\\repos\\5\\INFO\\Web1SimoneBalestreri\\5ia2425-web1-simonebalestreri\\WebApplication1\\WebApplication1\\wwwroot\\pages\\index.html"
+        }
+    ]
+}

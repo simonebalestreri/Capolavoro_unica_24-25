@@ -1,0 +1,178 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;          
+    padding: 20px 40px;             
+    background-color: #000;
+    color: white;
+}
+
+header .logo-center {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+header .logo-center img {
+    max-height: 40px;
+    display: inline-block;
+}
+
+header .login-right {
+    display: flex;
+    align-items: right;
+    margin-left: auto;
+}
+
+header .login-right a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 1px solid white;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+header .login-right a:hover {
+    background-color: #555;
+}
+
+
+
+/* Hero Section with Video Background */
+.hero {
+    position: relative;
+    height: 100vh; /* Imposta l'altezza al 100% della viewport */
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Assicura che il video sia dietro al contenuto */
+}
+
+.video-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    font-size: 1.25rem;
+    padding: 15px 30px;
+    background-color: #1e2a35;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #f1c500; /* Colore giallo per l'hover */
+}
+
+
+/* Auto in Pronta Consegna Styles */
+.cars-in-stock {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.car-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.car-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    background-color: #1e2a35;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #f1c500;
+}
+

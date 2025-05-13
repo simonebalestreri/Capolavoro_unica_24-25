@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+        <link rel="stylesheet" href="../css/stilemacchine.css">
+        <link rel="stylesheet" href="../scripts/script1.js">
+    </head>
+    
+<body>
+    <main>
+        <div id="header-placeholder"></div>
+            
+        
+        <section class="hero">
+            <div class="video-background">
+                <video autoplay muted loop class="video-bg" src="../assets/hero1.mp4"></video>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Esplora il futuro della mobilità</h1>
+                <p class="hero-description">Scopri l'innovazione e il lusso delle automobili Mercedes-Benz</p>
+                <a href="#scopri-di-piu" class="btn-hero">Scopri i modelli</a>
+            </div>
+        </section>
+        <!-- Auto in Pronta Consegna Section -->
+        <section class="cars-in-stock">
+            <h2 class="section-title">Auto in pronta consegna</h2>
+            <div class="car-cards-container">
+                <div class="car-card">
+                    <img src="/assets/classe_a.jpg" alt="Mercedes Classe A" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes Classe A</h3>
+                        <p class="car-description">Lusso, comfort e tecnologia al massimo livello.</p>
+                        <a href="#scopri-di-piu" class="btn-card" onclick="fetchModelData('1770101')">Scopri di più</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <img src="/assets/gla.jpg" alt="Mercedes GLA" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes GLA</h3>
+                        <p class="car-description">Design audace e prestazioni eccezionali.</p>
+                        <a href="#scopri-di-piu" class="btn-card">Scopri di più</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <img src="/assets/eqs.jpg" alt="Mercedes EQS" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes EQS</h3>
+                        <p class="car-description">L'auto elettrica di lusso per il futuro.</p>
+                        <a href="#scopri-di-piu" class="btn-card" onclick="fetchModelData('2230691')">Scopri di più</a>
+                    </div>
+                </div>
+                <!-- Aggiungi altre auto qui -->
+            </div>
+        </section>
+            <section class="car-cards">
+                <!-- Le card verranno inserite dinamicamente qui -->
+            </section>
+            
+        </div>
+    </main>
+    <script>src="/js/script1.js"</script>
+    <script>src="/js/template-loader.js"</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Carica i template
+            await TemplateLoader.initializeTemplates();
+        });
+    </script>
+    <script>
+        // Carica l'header da header.html
+        fetch("../components/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>   
+    <script>
+        // Carica il footer da footer.html
+        fetch("../components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                const footer = document.createElement('footer');
+                footer.innerHTML = data;
+                document.body.appendChild(footer);
+            });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#header-placeholder').addEventListener('click', function (event) {
+            if (event.target && event.target.matches('a.login-btn')) {
+                event.preventDefault();
+                window.location.href = '../components/login.html';
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#header-placeholder').addEventListener('click', function (event) {
+            if (event.target && event.target.matches('a.contatti-btn')) {
+                event.preventDefault();
+                window.location.href = '../components/contatti.html';
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.btn-hero').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '../components/modelli.html';
+        });
+    });
+</script>
+<!-- Popup -->
+<div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
+<div id="popup" class="popup">
+  <span class="close-btn" onclick="closePopup()">×</span>
+  <h2>Dettagli Tecnici</h2>
+  <div id="popupContent">
+    <p>Caricamento...</p>
+  </div>
+</div>
+
+
+<script>
+  async function fetchModelData(vehicleId) {
+      const url = `https://api.mercedes-benz.com/configurator/v2/markets/de_DE/models/${vehicleId}?zipCode=2000`;
+      const apiKey = "0f0c20a4-9d57-4fa1-8602-1b0799504475"; 
+  
+      // Mostra il popup con "Caricamento..."
+      document.getElementById('popupOverlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('popupContent').innerHTML = "<p>Caricamento...</p>";
+  
+      try {
+          const response = await fetch(url, {
+              method: "GET",
+              headers: {
+                  "Accept": "application/json",
+                  "x-api-key": apiKey
+              }
+          });
+  
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+  
+          const data = await response.json();
+          
+          // Estraggo solo le informazioni essenziali
+          const modelName = data.name || "N/A";
+          const price = data.priceInformation?.price ? data.priceInformation.price.toFixed(2) + " €" : "Non disponibile";
+          const vehicleType = data.vehicleBody?.bodyName || "N/A";
+          const vehicleClass = data.vehicleClass?.className || "N/A";
+          const steeringPosition = data.steeringPosition === "LEFT" ? "Sinistra" : "Destra";
+  
+          // Mostra i dati nel popup
+          document.getElementById('popupContent').innerHTML = `
+            <p><strong>Modello:</strong> ${modelName}</p>
+            <p><strong>Prezzo:</strong> ${price}</p>
+            <p><strong>Tipo di veicolo:</strong> ${vehicleType}</p>
+            <p><strong>Classe:</strong> ${vehicleClass}</p>
+            <p><strong>Posizione del volante:</strong> ${steeringPosition}</p>
+          `;
+      } catch (error) {
+          document.getElementById('popupContent').innerHTML = "<p>Errore nel caricamento dei dati.</p>";
+          console.error("Error fetching data:", error);
+      }
+  }
+  
+  function closePopup() {
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+<style>
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+</body>
+
+</html></html>
